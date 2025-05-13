@@ -1,4 +1,6 @@
 import './style.css'
+import { createOpenRouter } from '@openrouter/ai-sdk-provider'
+import { streamText } from 'ai'
 
 const form = document.querySelector('#form')
 
