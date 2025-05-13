@@ -33,15 +33,23 @@ if(prompt.trim() === '') {
       // system: 'Eres un abuelo de 90 años',
       // system: 'Eres un ejecutivo de una empresa transnacional'
       // system: 'Eres un gato',
-      system: 'Eres un experto en informatica con 30 años de experiencia en Microsoft',
+      // system: 'Eres un experto en informatica con 30 años de experiencia en Microsoft',
       temperature: 0
   })
+
+app.innerHTML = '<p class="text-gray-400">Generando respuesta...</p>'
 
 
 for await (const text of result.textStream ) {
     //console.log(text)
    app.append(text)
 }
+
+app.innerHTML = '' // limpia el contenido anterior
+for await (const text of result.textStream ) {
+   app.append(text)
+}
+
 
 submitBtn.disabled = false
 
