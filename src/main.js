@@ -13,6 +13,7 @@ const form = document.querySelector('#form')
 form.addEventListener('submit', async e =>{
     e.preventDefault()
 
+const promptInput = document.querySelector('#prompt')
 const prompt =document.querySelector('#prompt').value
 
 
@@ -21,6 +22,10 @@ if(prompt.trim() === '') {
     alert('La consulta no puede estar vacía')
     return
 }
+
+// Borra el contenido del input después de leer el valor
+  promptInput.value = ''
+  
  submitBtn.disabled = true
  const result = streamText({
       // model: openrouter('google/gemini-2.5-pro-exp-03-25:free'),
