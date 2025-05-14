@@ -16,43 +16,41 @@ https://rolgpt.netlify.app/
 
 ## 🚀 Instalación y uso
 
-1. Clona el repositorio:
-
 ```bash
-git clone https://github.com/tuusuario/rolgpt.git
+
+## Clona el repositorio:
+
+git clone https://github.com/Diego-Oruezabal/rolGpt
 cd rolgpt
-Instala las dependencias:
 
-bash
-Copiar
-Editar
+## Instala las dependencias:
+
 npm install
-Crea un archivo .env en la raíz con tu clave de OpenRouter:
 
-env
-Copiar
-Editar
+## Crea un archivo .env en la raíz con tu clave de OpenRouter:
+
 VITE_OPENROUTER_KEY=tu_clave_aqui
-Inicia el servidor de desarrollo:
 
-bash
-Copiar
-Editar
+## Inicia el servidor de desarrollo:
+
 npm run dev
-Abre el navegador en http://localhost:5173 para probar la app.
 
-🧪 Estructura del proyecto
-bash
-Copiar
-Editar
-├── public/
+## Abre el navegador para probar la app.
+
+http://localhost:5173
+
+```
+
+## 🧪 Estructura del proyecto
+
 ├── src/
 │   ├── main.js        # Lógica principal del cliente
 │   └── style.css      # Estilos base
 ├── index.html         # HTML principal con la interfaz de usuario
 ├── .env               # Clave de API (no subir al repositorio)
 └── README.md
-🧠 Personalidades disponibles
+
+## 🧠 Personalidades disponibles
 Algunas de las personalidades que puedes elegir en la app:
 
 👨‍💻 Programador senior
@@ -77,7 +75,7 @@ Algunas de las personalidades que puedes elegir en la app:
 
 Cada personalidad cambia el estilo y tono de las respuestas, permitiendo una experiencia más divertida, educativa o creativa.
 
-🛠 Tecnologías utilizadas
+## 🛠 Tecnologías utilizadas
 Vite
 
 OpenRouter.ai
@@ -86,9 +84,6 @@ AI SDK Provider
 
 HTML, CSS (Tailwind opcional), JavaScript
 
-📄 Licencia
-Este proyecto está bajo la licencia MIT.
-
-💬 Créditos
+## 💬 Créditos
 Creado por Diego Oruezabal.
 Inspirado en las infinitas posibilidades de los modelos de lenguaje y el juego de roles.
