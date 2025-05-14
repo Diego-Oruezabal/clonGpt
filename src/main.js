@@ -26,21 +26,17 @@ if(prompt.trim() === '') {
 }
 
 // Borra el contenido del input después de leer el valor
-  promptInput.value = ''
+ promptInput.value = ''
  submitBtn.disabled = true
 
  const result = streamText({
+       model: openrouter('meta-llama/llama-4-maverick:free'),
       // model: openrouter('google/gemini-2.5-pro-exp-03-25:free'),
-       model: openrouter('deepseek/deepseek-chat-v3-0324:free'),
+      // model: openrouter('deepseek/deepseek-chat-v3-0324:free'),
       // model: openrouter('google/gemma-3-4b-it:free'),
-      // model: openrouter('meta-llama/llama-3.3-70b-instruct:free'),
+      // model: openrouter('moonshotai/kimi-vl-a3b-thinking:free'),
       //  model: openrouter('nousresearch/deephermes-3-mistral-24b-preview:free'),
       prompt,
-      // system: 'Eres un niño de 3 años',
-      // system: 'Eres un abuelo de 90 años',
-      // system: 'Eres un ejecutivo de una empresa transnacional'
-      // system: 'Eres un gato',
-      // system: 'Eres un experto en informatica con 30 años de experiencia en Microsoft',
        ...(system && { system }),
       temperature: 0
   })
@@ -49,7 +45,7 @@ app.innerHTML = '<p class="text-gray-400">Generando respuesta...</p>'
 
 
 for await (const text of result.textStream ) {
-    //console.log(text)
+   
    app.append(text)
 }
 
