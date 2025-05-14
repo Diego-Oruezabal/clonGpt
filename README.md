@@ -12,7 +12,7 @@
 
 ## 📸 Vista previa
 
-![RolGpt Preview](https://rolgpt.netlify.app/)
+https://rolgpt.netlify.app/
 
 ## 🚀 Instalación y uso
 
