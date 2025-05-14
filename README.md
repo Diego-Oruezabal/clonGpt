@@ -42,13 +42,14 @@ http://localhost:5173
 ```
 
 ## 🧪 Estructura del proyecto
-
+```bash
 ├── src/
 │   ├── main.js        # Lógica principal del cliente
 │   └── style.css      # Estilos base
 ├── index.html         # HTML principal con la interfaz de usuario
 ├── .env               # Clave de API (no subir al repositorio)
 └── README.md
+```
 
 ## 🧠 Personalidades disponibles
 Algunas de las personalidades que puedes elegir en la app:
