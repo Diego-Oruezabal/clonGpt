@@ -14,7 +14,9 @@ form.addEventListener('submit', async e =>{
     e.preventDefault()
 
 const promptInput = document.querySelector('#prompt')
+const roleSelect = document.querySelector('#role')
 const prompt =document.querySelector('#prompt').value
+const system = roleSelect.value
 
 
 
@@ -25,8 +27,8 @@ if(prompt.trim() === '') {
 
 // Borra el contenido del input después de leer el valor
   promptInput.value = ''
-
  submitBtn.disabled = true
+
  const result = streamText({
       // model: openrouter('google/gemini-2.5-pro-exp-03-25:free'),
        model: openrouter('deepseek/deepseek-chat-v3-0324:free'),
@@ -39,7 +41,7 @@ if(prompt.trim() === '') {
       // system: 'Eres un ejecutivo de una empresa transnacional'
       // system: 'Eres un gato',
       // system: 'Eres un experto en informatica con 30 años de experiencia en Microsoft',
-       system: 'Eres un comico famoso de los años 90 en España, se podría decir que eres un clon de Chiquito de la calzada',
+       ...(system && { system }),
       temperature: 0
   })
 
@@ -52,6 +54,8 @@ for await (const text of result.textStream ) {
 }
 
 app.innerHTML = '' // limpia el contenido anterior
+
+
 for await (const text of result.textStream ) {
    app.append(text)
 }
